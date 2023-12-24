@@ -537,10 +537,10 @@ section {
 .footer-wrapper-modal {
   margin-left: auto;
 }
-.footer-modal {
+/* .footer-modal {
   display: flex;
   gap: 24px;
-}
+} */
 .footer-modal-p {
   color: var(--WHITE, #fff);
   font-size: 16px;
