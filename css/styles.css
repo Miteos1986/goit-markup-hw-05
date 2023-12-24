@@ -537,10 +537,7 @@ section {
 .footer-wrapper-modal {
   margin-left: auto;
 }
-/* .footer-modal {
-  display: flex;
-  gap: 24px;
-} */
+
 .footer-modal-p {
   color: var(--WHITE, #fff);
   font-size: 16px;
@@ -578,8 +575,11 @@ section {
 .footer-modal-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
 
   color: var(--WHITE, #fff);
   text-align: center;
@@ -590,9 +590,12 @@ section {
   letter-spacing: 0.04em;
   border-radius: 4px;
   background-color: var(--IRIS, #4d5ae5);
+  cursor: pointer;
+  border: none;
 }
 .footer-modal-icon {
   fill: currentColor;
+  margin-left: 16px;
 }
 /* main window */
 .backdrop {
@@ -607,6 +610,8 @@ section {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -623,6 +628,9 @@ section {
   min-height: 584px;
   border-radius: 4px;
   background: var(--DAIRY, #fcfcfc);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 24px;
 }
 
@@ -635,6 +643,7 @@ section {
   letter-spacing: 0.02em;
   margin-top: 48px;
   margin-bottom: 16px;
+  padding: 72px 24px 24px 24px;
 }
 .modal-close-btn {
   display: flex;
@@ -652,16 +661,21 @@ section {
   border-color: transparent;
   border-radius: 50%;
   background-color: #e7e9fc;
-  transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   fill: #fff;
   color: #fff;
   background-color: #404bbf;
+  border: none;
 }
 .modal-btn-icon {
   stroke: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-wrapper {
